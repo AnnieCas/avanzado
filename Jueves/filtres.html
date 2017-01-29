@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es" ng-app><!--ng-app directiva de angular necesaria-->
+  <head>
+    <meta charset="utf-8">
+    <title>Angular JS</title>
+    <script type="text/javascript" src="js/angular.min.js">
+    </script>
+  </head>
+  <body>
+    <div>
+      <h4>ng-model en Angular</h4>
+      <p>
+        <label>Dime tu nombre</label>
+        <input type="text"  ng-model="nombre"  placeholder="Aqui va tu nombre">
+      </p>
+      <p>
+        <label>Tu nombre es: </label>
+        {{nombre | uppercase}}
+      </p>
+
+      <p>
+        <label>Seleccionar país:</label>
+        <select ng-model="pais">
+          <option value="1">México</option>
+          <option value="2">Francia</option>
+          <option value="3">Alemania</option>
+        </select>
+        <label>Tu pais es:</label>{{pais}}
+      </p>
+
+      <p>
+        <label>Seleccione genero:</label>
+        <input type="radio" value="M" ng-model="genero">Masculino</input>
+        <input type="radio" value="F" ng-model="genero">Femeninoino</input>
+        <br>
+        <label>Tu genero es: </label>{{genero}}
+
+      </p>
+
+      <p>
+        <label>Cuales son tus hobbies</label>
+        <input type="checkbox" ng-model="opcion1">
+        <input type="checkbox" ng-model="opcion2">
+        <label>A ti te gusta:</label>{{opcion1}} {{ opcion2}}
+      </p>
+
+
+    </div>
+
+  </body>
+  <script type="text/javascript" src="js/app.js">    </script>
+
+</html>

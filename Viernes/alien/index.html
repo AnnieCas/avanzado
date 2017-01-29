@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Alien</title>
+  </head>
+  <body>
+
+    <h1>Pregunta al Alien</h1>
+
+    <img src="img/alien.jpg" alt="">
+    <br><br>
+    <textarea id="areadetexto" placeholder="Escribe tu pregunta" title="Decisión" required="true"></textarea>
+
+    <input id="submit" type="submit" value="Enviar" onclick=decision()>
+
+
+    <script>
+    function mt_rand (min, max) {
+        var argc = arguments.length;
+        if (argc === 0) {        min = 0;
+            max = 2147483647;
+        } else if (argc === 1) {
+            throw new Error('Warning: mt_rand() expects exactly 2 parameters, 1 given');
+        }    return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    function decision () {
+
+    var respuesta = new Array ("Si", "No", "Probablemente", "No sé", "Pregunta de nuevo")
+
+    document.write(respuesta[mt_rand(0, respuesta.length-1)]);
+
+    }
+
+    </script>
+
+  </body>
+</html>

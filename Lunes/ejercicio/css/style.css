@@ -1,0 +1,17 @@
+.resultado {
+  display: none;
+}
+
+.campo {
+  border: 1px solid purple;
+  width: 100%;
+  height: 700px;
+  margin-top: 3%;
+}
+
+.objetivo {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  background-color: red;
+}
